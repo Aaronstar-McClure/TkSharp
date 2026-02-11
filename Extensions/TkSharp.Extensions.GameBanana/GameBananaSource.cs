@@ -34,7 +34,7 @@ public sealed partial class GameBananaSource(int gameId) : ObservableObject, IGa
             if (ct.IsCancellationRequested) {
                 break;
             }
-
+            record.IsContentRated = false;
             var isRecordClean = record is {
                 Full: {
                     IsTrashed: false, IsFlagged: false, IsPrivate: false
